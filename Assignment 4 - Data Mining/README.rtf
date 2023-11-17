@@ -1,0 +1,112 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2709
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10300\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Q1 )WEKA\
+\
+=== Run information ===\
+\
+Scheme:       weka.classifiers.functions.LinearRegression -S 0 -R 1.0E-8 -num-decimal-places 4\
+Relation:     boston\
+Instances:    506\
+Attributes:   14\
+              CRIM\
+              ZN\
+              INDUS\
+              CHAS\
+              NOX\
+              RM\
+              AGE\
+              DIS\
+              RAD\
+              TAX\
+              PTRATIO\
+              B\
+              LSTAT\
+              MEDV\
+Test mode:    10-fold cross-validation\
+\
+=== Classifier model (full training set) ===\
+\
+\
+Linear Regression Model Equation\
+\
+MEDV =\
+\
+     -0.1084 * CRIM +\
+      0.0458 * ZN +\
+      2.7187 * CHAS +\
+    -17.376  * NOX +\
+      3.8016 * RM +\
+     -1.4927 * DIS +\
+      0.2996 * RAD +\
+     -0.0118 * TAX +\
+     -0.9465 * PTRATIO +\
+      0.0093 * B +\
+     -0.5226 * LSTAT +\
+     36.3411\
+\
+Time taken to build model: 0.1 seconds\
+\
+=== Cross-validation ===\
+=== Summary ===\
+\
+Correlation coefficient                  0.8451\
+Mean absolute error                      3.3933\
+Root mean squared error                  4.9145\
+Relative absolute error                 50.8946 %\
+Root relative squared error             53.3085 %\
+Total Number of Instances              506  \
+\
+\
+11 (12 in total 11 attributes and one intercept) out of the 14 attributes are used for the linear regression equation. 
+\f1\fs26 The coefficients represent the impact/weight  of each attribute on the predicted MEDV value. For example, a higher weight  indicates a stronger positive relationship with the target attribute, while a higher negative coefficient indicates a stronger negative relationship.The constant term, 36.3411, represents the baseline or intercept value when all the input attributes are zero\
+\
+The 3 attributes is missed because maybe weka assumed they were less relevant or did not significantly contribute to the predictive power of the model or maybe they were excluded from the analysis during the preprocessing stage due to missing values or data quality issues.\
+\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97-----------\
+\
+Q2) KNIME \
+\
+Linear Regression Equation :\
+Rings = \
+ Sex=I  *  -0.8249 +\
+ Sex=M*0.0577 +\
+ Length * -0.4583 +\
+ Diameter * 11.0751 +\
+ Height * 10.7615 +\
+ Whole weight * - 8.9754 +\
+ Shucked weight* -19.7869 +\
+ Viscera weight * -10.5818 +\
+ Shell weight * 8.7418 +\
+ 3.8946\
+\
+\
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 The equation calculates an estimated number of rings for a given abalone specimen. From the predicted  linear regression equation for the abalone dataset, the variable with the highest positive correlation is the "Diameter" variable. \
+And the variable with the highest negative correlation is the "Shucked weight" variable. \
+\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+Q3) Rapid Miner\
+\
+By using selected attributes of length diameter height\
+\
+Linear regression equation is\
+\
+Num_rings = \
+Length * -11.933 +\
+Diameter* 25.766 +\
+Height *20.358 +\
+2.836\
+\
+The equation calculates an estimated number of rings for a given abalone specimen By using selected attributes of length diameter height. The highest positive correlation here is with diameter and negative correlation with length\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+
+\f0\fs24 \
+\
+}
